@@ -2,6 +2,9 @@ const mainSection = document.getElementById("parent");
 const descA=document.getElementById('desc');
 const submitBtn=document.getElementById('submitBtn');
 const titleA=document.getElementById('title');
+const create=document.getElementById('create');
+const description=document.getElementById('description');
+const createBtn=document.getElementById('createBtn');
 async function fetchData(){
     try{
     let res = await fetch("https://colorful-pig-cummerbund.cyclic.app/notes/note",{
@@ -132,3 +135,29 @@ async function updateNote(item){
       console.log(err);
     }
 }
+
+
+
+//post 
+// async function postData(){
+//     try{
+//       let res=await fetch(`https://colorful-pig-cummerbund.cyclic.app/notes/create`,{
+//         method:"POST",
+//         headers:{
+//           "Content-type":"application/json",
+//           authorization: `Bearer ${localStorage.getItem('token')}`
+//         },
+//         body:JSON.stringify({
+//             title:create.value,
+//             body:description.value,
+  
+//         })
+//       })
+//       fetchData();
+//     }catch(error){
+//       console.error(error);
+//     }
+//   }
+//   createBtn.addEventListener("click",()=>{
+//     postData();
+//   });
