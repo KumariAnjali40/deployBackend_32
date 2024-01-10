@@ -54,8 +54,6 @@ noteRouter.patch('/update/:noteID',async(req,res)=>{
 
 
 
-
-//delete
 //delete
 noteRouter.delete('/delete/:noteID',async(req,res)=>{
    const {noteID} = req.params;
