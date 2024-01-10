@@ -10,7 +10,9 @@ app.use(express.json());
 app.use('/users',userRouter);
 app.use('/notes',noteRouter)
 
-
+app.get('/',(req,res)=>{
+    res.send("welcome to my home");
+})
 
 app.listen(4500,async()=>{
     try{
