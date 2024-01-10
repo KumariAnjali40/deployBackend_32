@@ -35,14 +35,14 @@
               <a class="nav-link" href="/about">About</a>
             </li>
           </ul>
-          <div class="d-flex" role="search">
+          <div  class="d-flex" role="search">
             <a href="/frontend/login.html"
-              ><button class="btn btn-primary mx-2" type="submit">
+              ><button id="login"  class="btn btn-primary mx-2" type="submit">
                 Login
               </button></a
             >
-            <a href="/frontend/signup.html"
-              ><button class="btn btn-primary mx-2" type="submit">
+            <a  href="/frontend/signup.html"
+              ><button id="signup"   class="btn btn-primary mx-2" type="submit">
                 Signup
               </button></a
             >
@@ -113,3 +113,10 @@
     ></script>
   </body>
 </html>
+<script>
+    const user=JSON.parse(localStorage.getItem("user"));
+    if(user){
+        document.getElementById('signup').innerText=`${user}`
+        document.getElementById('login').style.display="none";
+    }
+</script>
