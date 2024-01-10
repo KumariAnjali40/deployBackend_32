@@ -78,7 +78,7 @@
             .then(data=>{
                 console.log(data)
                 localStorage.setItem("token",data.access_token);
-                localStorage.setItem('user',data.name.name);
+                localStorage.setItem('user',JSON.stringify(data.user.name));
                   setTimeout(()=>{
                     location.href="./index.html";
                   },2000)

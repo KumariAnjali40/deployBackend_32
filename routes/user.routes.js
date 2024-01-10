@@ -31,8 +31,8 @@ userRouter.post('/login',async(req,res)=>{
           const user=await UserModel.findOne({email});
            if(user){
             bcrypt.compare(pass,user.pass,(err,result)=>{
-                const access_token=jwt.sign({userID:user._id,user:user.name},"masai");
                 if(result){
+                    const access_token=jwt.sign({userID:user._id,user:user.name},"masai");
                     res.status(200).json({msg:"Login successfull",access_token,user})
                 }else{
                     res.status(200).json({msg:"Please Register,Wrong Credentials"})
