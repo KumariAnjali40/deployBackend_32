@@ -62,7 +62,7 @@ function createCard(item){
     update.innerText="update";
 
     update.addEventListener("click",(e)=>{
-        e.preventDefault();
+        // e.preventDefault();
         // console.log(item.body);
         // console.log(item.title);
         descA.value=item.body;
@@ -113,7 +113,8 @@ function createCard(item){
 
  //update
  submitBtn.addEventListener('click',(e)=>{
-    e.preventDefault();
+    // e.preventDefault();
+    console.log("hello")
     updateNote(currentEdit);
 })
 async function updateNote(item){
@@ -138,7 +139,7 @@ async function updateNote(item){
 
 
 
-//post 
+// //post 
 // async function postData(){
 //     try{
 //       let res=await fetch(`https://colorful-pig-cummerbund.cyclic.app/notes/create`,{
@@ -153,11 +154,17 @@ async function updateNote(item){
   
 //         })
 //       })
+//       console.log(res)
 //       fetchData();
 //     }catch(error){
 //       console.error(error);
 //     }
 //   }
-//   createBtn.addEventListener("click",()=>{
-//     postData();
-//   });
+//     createBtn.addEventListener("click", () => {
+//         console.log("hello")
+//     //   postData();
+//     });
+
+export{
+    fetchData,
+}
