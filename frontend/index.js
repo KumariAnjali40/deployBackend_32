@@ -24,20 +24,7 @@ async function fetchData(){
     }
 }
 fetchData();
-// const fetchData = ()=>{
-//     fetch("",{
-//         headers:{
-//            "Content-type":"application/json",
-//             authorization: Bearer ${localStorage.getItem('token')}
-//         }
-//     }).then(res=>res.json())
-//     .then((data)=>{
-//         console.log(data.notes);
-//         appendData(data.notes);
-//     })
-//     .catch(err=>console.log(err))
-// }
-// fetchData()
+
 function appendData(data){
     mainSection.innerHTML="";
     data.map(item =>{
@@ -139,31 +126,7 @@ async function updateNote(item){
 
 
 
-// //post 
-// async function postData(){
-//     try{
-//       let res=await fetch(`https://colorful-pig-cummerbund.cyclic.app/notes/create`,{
-//         method:"POST",
-//         headers:{
-//           "Content-type":"application/json",
-//           authorization: `Bearer ${localStorage.getItem('token')}`
-//         },
-//         body:JSON.stringify({
-//             title:create.value,
-//             body:description.value,
-  
-//         })
-//       })
-//       console.log(res)
-//       fetchData();
-//     }catch(error){
-//       console.error(error);
-//     }
-//   }
-//     createBtn.addEventListener("click", () => {
-//         console.log("hello")
-//     //   postData();
-//     });
+
 
 export{
     fetchData,
